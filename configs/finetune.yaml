@@ -1,7 +1,7 @@
 MODEL:
   META_ARCHITECTURE: "GeneralizedRCNN"
   # WEIGHT: "./outputs/pretrain/model_pretrain.pth"
-  WEIGHT: "s3://tubi-playground-production/wenjuan-playground/video/MTS_model/model_finetune.pth"
+  WEIGHT: "model/model_finetune.pth"
   BACKBONE:
     CONV_BODY: "R-50-FPN"
     OUT_CHANNELS: 256
@@ -66,7 +66,7 @@ SOLVER:
   MAX_ITER: 300000
   IMS_PER_BATCH: 8
   RESUME: True
-OUTPUT_DIR: "s3://tubi-playground-production/wenjuan-playground/video/MTS_finetune"
+OUTPUT_DIR: "outputs"
 TEST:
   VIS: True
   CHAR_THRESH: 192
