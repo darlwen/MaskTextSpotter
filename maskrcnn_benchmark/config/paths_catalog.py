@@ -81,6 +81,10 @@ class DatasetCatalog(object):
         elif "icdar_2013" in name:
             data_dir = DatasetCatalog.DATA_DIR
             attrs=DatasetCatalog.DATASETS[name]
+            if len(attrs) > 1:
+                gts_dir = os.path.join(data_dir, attrs[1])
+            else:
+                gts_dir = None
             args=dict(
                 use_charann=True,
                 imgs_dir=os.path.join(data_dir,attrs[0]),
