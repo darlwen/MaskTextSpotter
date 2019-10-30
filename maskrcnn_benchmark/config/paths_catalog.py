@@ -28,7 +28,7 @@ class DatasetCatalog(object):
         ),
         "icdar_2013_test":(
             "icdar2013/test_images",
-            "icdar2013/test_gts",
+            #"icdar2013/test_gts",
         ),
         "icdar_2015_train": (
             "icdar2015/train_images",
