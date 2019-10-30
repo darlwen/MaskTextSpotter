@@ -88,7 +88,7 @@ class DatasetCatalog(object):
             args=dict(
                 use_charann=True,
                 imgs_dir=os.path.join(data_dir,attrs[0]),
-                gts_dir=os.path.join(data_dir,attrs[1]),
+                gts_dir=gts_dir,
             )
             return dict(
                 args=args,
